@@ -1,0 +1,34 @@
+# Set vi-mode as default editing mode
+set editing-mode vi
+set show-all-if-ambiguous on
+set completion-ignore-case on
+set show-mode-in-prompt on
+
+# use C-x-C-r to source this file
+"\C-x\C-r": re-read-init-file
+
+# use C-x-C-e to edit this file
+"\C-x\C-e": "vim ~/.inputrc\r"
+
+###########################################################
+## Keymaps for when we're in insert (i.e., typing stuff in) mode
+set keymap vi-insert
+
+# Do Matlab-like forward and backward search history while typing
+"\C-\M-p": history-search-backward
+"\C-\M-n": history-search-forward
+
+# Cycle through possible completions
+"\C-p": menu-complete-backward
+"\C-n": menu-complete
+
+# use C-x-C-e to edit this file
+"\C-x\C-e": "vim ~/.inputrc\r"
+
+# use more convenient mapping to go from insert mode to normal mode
+# "jk": "\e"
+ "jk": vi-movement-mode
+
+###########################################################
+## Keymaps for when we are in normal mode (i.e. movement mode)
+set keymap vi-command
