@@ -1,11 +1,11 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: vimrc
+  name: vimrc2
   annotations:
     github.com/project-slug: multigrid101/vimrc
   namespace: default
 spec:
   type: other
   lifecycle: unknown
-  owner: Sebastian
+  owner: maximilian
